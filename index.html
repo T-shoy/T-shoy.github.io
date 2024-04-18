@@ -3,56 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <title>River Landscape Samples</title>
     <style>
-        .image-container {
+        body {
+            margin: 0;
+            padding: 0;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
+            align-items: center;
+            flex-direction: column; /* 垂直居中 */
+            height: 100vh;
+            background-color: #f0f0f0;
         }
-        .image-item {
-            margin: 20px;
-            text-align: center;
-        }
-        .image-item img {
-            width: 300px;
-            height: auto;
-        }
-        .image-item p {
-            margin-top: 10px;
+        img {
+            width: 80%; /* 图片宽度占父元素宽度的80% */
+            height: auto; /* 高度自适应，保持图片比例 */
+            margin-bottom: 10px; /* 图片下方留出一定的空间 */
         }
     </style>
 </head>
 <body>
-    <div class="image-container" id="image-container">
-        <!-- 在这里将显示图片 -->
+    <div>
+        <h1>元写真・教師画像・学習結果の例</h1>
+        <img src="sample.png" alt="Your Image">
     </div>
 </body>
 </html>
-<script>
-    window.onload = function() {
-        const imageContainer = document.getElementById('image-container');
-        const images = [
-            { src: '210.JPG', title: 'No.210' },
-            { src: '80.JPG', title: 'No.80' },
-            { src: '155.JPG', title: 'No.155' },
-            { src: '28.JPG', title: 'No.28' },
-            // 添加更多图片和标题
-        ];
-
-        images.forEach(image => {
-            const imageItem = document.createElement('div');
-            imageItem.classList.add('image-item');
-
-            const imageElement = document.createElement('img');
-            imageElement.src = image.src;
-
-            const titleElement = document.createElement('p');
-            titleElement.textContent = image.title;
-
-            imageItem.appendChild(imageElement);
-            imageItem.appendChild(titleElement);
-            imageContainer.appendChild(imageItem);
-        });
-    };
-</script>
