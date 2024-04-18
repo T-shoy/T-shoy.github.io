@@ -12,13 +12,16 @@
             justify-content: center;
             align-items: center;
             flex-direction: column; /* 垂直居中 */
-            height: 100vh;
+            min-height: 100vh; /* 最小高度为视口高度 */
             background-color: #f0f0f0;
+        }
+        div {
+            text-align: center;
         }
         img {
             width: 80%; /* 图片宽度占父元素宽度的80% */
             height: auto; /* 高度自适应，保持图片比例 */
-            margin-bottom: 10px; /* 图片下方留出一定的空间 */
+            margin-bottom: 20px; /* 图片下方留出一定的空间 */
         }
     </style>
 </head>
